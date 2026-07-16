@@ -1,0 +1,279 @@
+/* Globalni stil */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #252525; /* Black */
+    background: linear-gradient(to right, #443A35, #C5B49D, #E4DDCC, #F8F4EE); /* Umber → Taupe → Soft Dune → Vanilla */
+    background-attachment: fixed;
+    text-align: center;
+}
+
+/* Navigacija */
+header {
+    background: rgba(68, 58, 53, 0.9); /* Umber s prozirnošću */
+    color: #F8F4EE; /* Vanilla */
+    padding: 20px 0;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 12px rgba(37, 37, 37, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+nav a {
+    color: #F8F4EE;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #E4DDCC; /* Soft Dune */
+}
+
+/* Centrirani layout */
+main, section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px 20px;
+    background: rgba(248, 244, 238, 0.8); /* Vanilla */
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(68, 58, 53, 0.15);
+}
+
+/* Naslovi s highlight trakom */
+h2 {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    font-weight: 600;
+    color: #443A35; /* Umber */
+    margin-bottom: 20px;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 12px;
+    background: #E4DDCC; /* Soft Dune */
+    z-index: -1;
+    border-radius: 6px;
+}
+
+/* Profilna slika */
+.profile {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #F8F4EE;
+    box-shadow: 0 4px 12px rgba(68, 58, 53, 0.25);
+    margin-bottom: 20px;
+}
+
+/* Uvodni tekst */
+.intro p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #443A35;
+}
+
+/* Galerija */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(68, 58, 53, 0.15);
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 18px rgba(68, 58, 53, 0.25);
+}
+
+/* Lightbox */
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(37, 37, 37, 0.9); /* Black */
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+#close {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    font-size: 50px;
+    color: #F8F4EE;
+    cursor: pointer;
+}
+
+/* Hero sekcija u Tiara paleti */
+body.o-meni {
+    background: linear-gradient(to right, #443A35, #C5B49D, #E4DDCC, #F8F4EE);
+    color: #252525;
+}
+
+.hero {
+    background-color: #E4DDCC; /* Soft Dune */
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid #C5B49D;
+}
+
+.hero-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #F8F4EE;
+    box-shadow: 0 6px 20px rgba(68, 58, 53, 0.25);
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 600;
+    color: #443A35;
+    font-family: 'Georgia', serif;
+}
+
+.hero-title span {
+    color: #C5B49D;
+    font-style: italic;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: #443A35;
+    margin-top: 10px;
+}
+
+/* Sekcija O meni */
+.about {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background: #F8F4EE;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(68, 58, 53, 0.15);
+}
+
+.about h2 {
+    color: #443A35;
+}
+
+.about p {
+    font-size: 18px;
+    color: #252525;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    background: #E4DDCC; /* Soft Dune */
+    color: #443A35; /* Umber */
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid #C5B49D;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Mapa */
+.map img {
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(68, 58, 53, 0.2);
+}
+
+/* Gift registry */
+.gift-registry {
+    max-width: 300px;
+}
+
+.gift-registry h2 {
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.gift-registry p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.qr {
+    width: 120px;
+    margin-top: 15px;
+    border-radius: 6px;
+}
+
+/* Kontakt info */
+.contact-info {
+    max-width: 300px;
+    text-align: left;
+}
+
+.contact-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #443A35;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+}
