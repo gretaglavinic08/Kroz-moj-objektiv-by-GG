@@ -19,7 +19,7 @@ body {
 /* Header po stranicama */
 .hero.mustang { background-color: #807D7D; }  /* Početna */
 .hero.shadow  { background-color: #4E4949; }  /* O meni */
-.hero.caviar  { background-color: #010101; }  /* Portfolio */
+.hero.caviar  { background-color: transparent !important; }  /* Portfolio */
 .hero.saddle  { background-color: #5C5551; }  /* Cjenik */
 
 /* Navigacija – blur + veći tekst */
