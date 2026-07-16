@@ -317,7 +317,7 @@ body.o-meni {
 
 .fade-slide {
     position: relative;
-    height: 500px; /* VEĆE FOTKE */
+    height: 300px; /* VEĆE FOTKE */
 }
 
 .fade-slide img {
